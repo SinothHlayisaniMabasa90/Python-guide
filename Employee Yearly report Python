@@ -1,0 +1,24 @@
+employeeDetails = str(input()) 
+employeeDetails = employeeDetails.split(",")
+
+employeeNum = employeeDetails[0]
+totHours = 0
+totGP = 0
+
+while employeeDetails[0] != "0": 
+    
+    employeeName = employeeDetails[1] 
+    hoursWorked = int(employeeDetails[2])
+    ratePay = int(employeeDetails[3])
+    
+    grossPay = int(employeeDetails[2]) * int(employeeDetails[3])
+    print(employeeDetails[0] + "" + employeeDetails[1] + "" +employeeDetails[2] + "" +employeeDetails[3] + " " +str(grossPay))
+    totHours += int(employeeDetails[2]) #This will now add to our variable for hours initialized at the top of the program
+    totGP += grossPay #This will now add to our variable for totGP initialized at the top of the program
+
+    employeeDetails = str(input())
+    employeeDetails = employeeDetails.split(",")
+    employeeNum = employeeDetails[0]
+
+print("Total hours:", str(totHours))
+print("Total gross:", str(totGP)) 
